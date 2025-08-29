@@ -5,6 +5,9 @@ def count_book_words(text):
         word_count += 1
     
     return word_count
+# or
+# def count_book_words(text):
+#     return len(text.split())
 
 def count_book_letters(text):
     letter_count = {}
