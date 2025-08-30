@@ -20,11 +20,5 @@ def count_book_letters(text):
 
     return letter_count
 
-# letters = {}
-# text = "This is a string."
-# for t in text.lower():
-#     if t not in letters:
-#         letters[t] = 1
-#     else:
-#         letters[t] += 1
-# print(letters)
+def sort_letter_dict(letter_count):
+    pass
