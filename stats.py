@@ -1,18 +1,11 @@
 def count_book_words(text):
-    word_count = 0
+    return len(text.split())
 
-    for t in text.split():  # becomes a list and just works; dunno how. did suspect the possibility, and boots obliged
-        word_count += 1
-    
-    return word_count
-# or
-# def count_book_words(text):
-#     return len(text.split())
 
 def count_book_letters(text):
     letter_count = {}
 
-    for t in text.lower():  # iterating on a string is magical, wonderful, and unexpected
+    for t in text.lower():
         if t not in letter_count:
             letter_count[t] = 1
         else:
@@ -20,5 +13,15 @@ def count_book_letters(text):
 
     return letter_count
 
-def sort_letter_dict(letter_count):
-    pass
+
+def make_letter_list(letter_count): # just makes appropriate list out of letter_count
+    letter_list = []
+
+    for letter in letter_count:
+        letter_list.append({"letter": letter, "num": letter_count[letter]})
+
+    return letter_list
+
+
+def sort_on(letter_list):
+    return letter_list["num"]
