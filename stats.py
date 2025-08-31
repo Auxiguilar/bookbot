@@ -6,10 +6,11 @@ def count_book_characters(text):
     character_count = {}
 
     for char in text.lower():
-        if char.isalpha() == True and char not in character_count:  # now only alphabeticals
-            character_count[char] = 1
-        elif char.isalpha() == True:
-            character_count[char] += 1
+        if char.isalpha():  # now only alphabeticals
+            if char not in character_count:
+                character_count[char] = 1
+            else:
+                character_count[char] += 1
     
     return character_count
 
